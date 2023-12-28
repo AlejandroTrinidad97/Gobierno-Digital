@@ -1,16 +1,17 @@
 import pokeball from './../assets/Pokeball.png';
+import { Link } from "react-router-dom";
 const Header = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-           <img src={ pokeball } width = {50 } />
+        <nav className="navbar navbar-expand-lg" style={{backgroundColor: "rgba(255, 58, 57, 0.9)"}}>
+           <img src={ pokeball } width = { 50 } />
             <a className="navbar-brand">Pokedex</a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio</a>
+            <div className="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav">
+                <li className="nav-item">
+                    <button><Link to="/" className='nav-link'>Inicio</Link></button>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Acerca de...</a>
+                <li className="nav-item">
+                    <button className="nav-link" onClick={()=>alert("Pokedex 2023\nProgramador: Alejandro Trinidad Zavala")}>Acerca de...</button>
                 </li>
                 </ul>
             </div>
