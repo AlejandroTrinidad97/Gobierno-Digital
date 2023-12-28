@@ -25,6 +25,7 @@ const DetailPokemon = () => {
 			let _tipos = data.types.map( (type) => type.type.name).join(', ')
 
 			let _habilidades = data.abilities.map( (item) => item.ability.name).join(', ')
+            let _movimientos = data.moves.map( (item) => item.move.name).join(', ')
 
 			const objPokemon = {
 				img: data.sprites.front_shiny,
@@ -33,7 +34,8 @@ const DetailPokemon = () => {
 				tipos : _tipos,
 				altura: data.height,
 				peso: data.weight,
-				habilidades: _habilidades
+				habilidades: _habilidades,
+                movimientos: _movimientos
 			
 			}
 
@@ -71,6 +73,8 @@ const DetailPokemon = () => {
 					<li> <strong>Altura : </strong>{ pokemon.altura / 10} metros </li>
 					<li> <strong>Peso : </strong>{ pokemon.peso / 10} kilogramos </li>
 					<li> <strong>Habilidades : </strong>{ pokemon.habilidades}  </li>
+                    <li> <strong>Movimientos : </strong>{ pokemon.movimientos}  </li>
+                    
 				</ul>
 			
 			</div>
