@@ -1,7 +1,9 @@
+import ListPokemons from "../components/ListPokemons";
+
 const Pokedex = () => {
     return (
         <>
-             <p>Pokedex</p>
+            <ListPokemons />
         </>
     )
 }
